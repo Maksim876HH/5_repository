@@ -1,0 +1,1578 @@
+body {
+    font-family: 'Inter', sans-serif; /* Напиши здесь название своего шрифта */
+}
+
+.header {
+/* 60px — отступ сверху, 0 — по бокам, 40px — отступ снизу */
+    padding: 10px 0 20px; 
+    background-color: #ffffff;
+    display: block;
+    /* Убираем margin-bottom, он нам не понадобится, если настроим следующую секцию */
+    margin-bottom: 0;
+}
+
+.main {
+    background-color: #F5F5F5; /* Светло-серый фон для остального сайта */
+}
+
+.container {
+   max-width: 1200px; /* Ширина сайта */
+    margin: 0 auto;    /* Магия: центрирует блок на странице */
+    padding: 0 20px;   /* Минимальный отступ от краев экрана */
+    display: flex;     /* Включаем флекс ТОЛЬКО тут */
+    justify-content: space-between; /* Расталкивает элементы по краям РАМКИ */
+    align-items: center; /* ИЗМЕНИ с flex-start на center */
+    width: 100%;
+    
+}
+
+.header_logo {
+    margin-left: 20px;
+    width: 170px;
+    margin-right: 40px;
+}
+
+.header_list {
+    display: flex;      /* Выстраивает элементы в горизонтальную линию */
+    align-items: center; /* Центрирует текст по вертикали */
+    gap: 30px;          /* Задает красивое расстояние между словами */
+    list-style: none;   /* УБИРАЕТ ТОЧКИ (маркеры) */
+    padding: 0;         /* Убирает стандартный отступ списка слева */
+    margin: 0;          /* Убирает внешние отступы браузера */
+}
+
+.header_list a:hover {
+    opacity: 0.8;           /* Логотипы партнеров обычно делают бледнее */
+    transition: 0.3s;
+}
+
+.header_list .active {
+   color: #0FB3AF; 
+}
+
+.header_list a {
+    text-decoration: none; /* Убирает подчеркивание */
+    color: #333;           /* Делает текст темным, а не синим */
+    font-weight: 500;
+    font-size: 17px;
+}
+
+
+/* Контейнер, который выстраивает кнопки в линию */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Расстояние между кнопками */
+}
+
+/* Стили для левой кнопки (Sign Up) */
+.btn_singup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none !important; /* Убираем подчеркивание */
+    outline: none;
+    cursor: pointer;
+    
+    /* Точные размеры и скругление как у правой кнопки */
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    
+    /* Делаем её прозрачной, но со стильной рамкой */
+    background: transparent;
+    border: 1px solid #8F9092; 
+    
+    /* Шрифты один в один как у правой кнопки */
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #606060; /* Такой же цвет текста */
+    
+    transition: all 0.2s ease;
+}
+
+.btn_singup:hover {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+}
+
+.btn_singup:active {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+}
+
+.btn_singup:focus {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+}
+
+
+
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+  border-radius: 30px;
+  border: 1px solid #8F9092;
+  transition: all 0.2s ease;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #606060;
+  text-shadow: 0 1px #fff;
+}
+
+
+.button:hover {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+}
+
+.button:active {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+}
+
+.button:focus {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+}
+
+
+
+.btn {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+     border-radius: 5px;
+    width: 125px;
+    height: 40px;
+    background: #0FB3AF;
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.btn:hover {
+    max-height: 50px;       /* Уменьшили высоту со 150 до 50 (как в Figma) */
+    filter: (100%);
+    opacity: 0.9;           /* Логотипы партнеров обычно делают бледнее */
+    transition: 0.3s;
+}
+
+
+
+
+
+.product {
+    padding: 0;
+}
+
+.product_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем заголовок, текст и кнопку */
+    text-align: center;
+    gap: 20px;
+}
+
+
+
+.card-queen {
+    margin-top: 0;
+    min-height: calc(100vh - 80px);
+    width: 100%; /* Растягиваем на весь экран */
+    text-align: center;
+    background-image: url("img/zadnii_fon.png");
+    background-size: cover;       
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.card-queen .container {
+    display: block; /* Отменяем флекс хедера, чтобы текст шел сверху вниз */
+}
+
+.btn-2 {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+     border-radius: 5px;
+    width: 165px;
+    height: 50px;
+    background: #323333;
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.btn-2:hover {
+    max-height: 50px;       /* Уменьшили высоту со 150 до 50 (как в Figma) */
+    filter: (100%);
+    opacity: 0.9;           /* Логотипы партнеров обычно делают бледнее */
+    transition: 0.3s;
+}
+
+
+
+.welcome_text {
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.welcome_title {
+    color: #0FB3AF; /* Цвет как на макете */
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px; /* ЭТОТ ОТСТУП создаст пространство до текста ниже */
+}
+
+.welcome_text {
+    padding-top: 70px; 
+}
+
+.welcome_desc {
+    opacity: 0.8;
+}
+
+
+
+
+.features {
+    background-color: #F5F5F5; /* Твой серый фон */
+    padding: 130px 0;           /* 60px сверху и снизу, 0 по бокам */
+}
+
+.feature_item {
+    /* Это заставит и иконку, и заголовок, и описание встать по центру */
+    text-align: center; 
+}
+
+.feature_icon {
+    width: 80px;
+    margin-bottom: 15px; 
+    /* Если иконки разной высоты, это поможет их выровнять */
+    display: inline-block;
+}
+
+.feature_title {
+    text-align: center;
+    line-height: 1.6;    /* Межстрочный интервал для читабельности */
+}
+
+.feature_desc {
+    text-align: center;
+    line-height: 1.6; 
+    opacity: 0.7; 
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    /* ГЛАВНОЕ: ограничь ширину, чтобы текст начал переноситься раньше */
+    max-width: 250px; 
+    /* Центрируем сам текстовый блок, если он сбился */
+    margin: 0 auto;  /* Межстрочный интервал для читабельности */
+}
+
+
+
+
+
+/* Обращаемся к контейнеру именно внутри секции welcome_2 */
+.welcome_2 .container {
+    display: block; /* Убираем флекс, который расталкивает элементы */
+    text-align: center; /* Центрируем содержимое */
+}
+
+.welcome_text_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирует элементы по горизонтали */
+    text-align: center;
+    margin: 0 auto; /* На всякий случай центрируем сам блок */
+}
+
+.welcome_title_2 {
+    color: #0FB3AF;
+}
+
+
+
+
+.feedback {
+    gap: 30px;                     /* Расстояние между иконкой и текстом */
+    padding-bottom: 0;
+}
+
+.feedback .container {
+    display: flex;
+    align-items: center;    /* Центрирует картинку и текст по вертикали друг относительно друга */
+    justify-content: flex-start; /* Прижимает всё содержимое к левому краю */
+    gap: 120px;
+}
+
+
+.welcome_title_3 {
+    margin-bottom: 20px;
+    color: #0FB3AF;
+}
+
+.welcome_desc_3 {
+    margin-bottom: 30px;
+}
+
+
+/* From Uiverse.io by alexmaracinaru */ 
+.cta {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+
+.btn_3 {
+       text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+     border-radius: 5px;
+    width: 165px;
+    height: 50px;
+    background: #0FB3AF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800; 
+}
+
+.btn_3:hover {
+    max-height: 50px;       /* Уменьшили высоту со 150 до 50 (как в Figma) */
+    filter: (100%);
+    opacity: 0.9;           /* Логотипы партнеров обычно делают бледнее */
+    transition: 0.3s;
+}
+
+.feedback_img {
+    width: 450px;          /* Ограничиваем размер иконки */
+    height: auto;
+}
+
+
+
+
+
+
+.feedback_4 {
+    position: relative; /* Создаем систему координат внутри секции */
+    margin-top: 50px; 
+    padding: 100px 0; /* Уменьшили со 120px до 60px (верх и низ) */
+    overflow: visible;  /* Линия может выходить за края */
+}
+
+
+.feedback_img_2 {
+    width: 510px;          /* Ограничиваем размер иконки */
+    height: auto; 
+}
+
+
+
+.line_4 {
+    position: absolute;
+    /* Регулируй top и left, чтобы линия совпала с иконкой и текстом, как на макете */
+    top: -5%;           
+    left: 37%;          /* Немного сместим влево от центра, чтобы не мешала тексту */
+    transform: translate(-50%, -50%); 
+    
+    /* ГЛАВНОЕ ИСПРАВЛЕНИЕ ТУТ */
+    z-index: 0;         /* Слой 0 — линия на фоне */
+    pointer-events: none; /* Делаем линию "призраком", чтобы можно было выделить текст под ней */
+}
+
+/* Настраиваем контент, чтобы он был НАД линией */
+.feedback_4 .container {
+    position: relative; /* Обязательно добавляем позиционирование */
+    z-index: 2;        /* Слой 2 — выше, чем линия (0) */  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 120px;
+}
+
+
+.welcome_title_4 {
+    margin-bottom: 10px;
+     color: #0FB3AF;
+}
+
+.welcome_desc_4 {
+    margin-bottom: 30px;
+}
+
+
+
+
+
+.feedback_5 {
+    position: relative; /* Создаем систему координат внутри секции */
+    margin-top: 10px; /* Уменьшили отступ сверху, чтобы притянуть к feedback_4 */
+    padding: 70px 0;  /* Уменьшили со 120px до 60px (верх и низ) */
+    overflow: visible;  /* Линия может выходить за края */
+    
+}
+
+.line_5 {
+    position: absolute;
+    /* Отрицательный top в пикселях поднимет верх линии точно к кнопке сверху */
+    top: -127px;           
+    /* Меняем left на right, чтобы привязать её к правой стороне экрана */
+    left: 20%;          
+    z-index: 0;         /* Слой 0 — линия на фоне */
+    pointer-events: none; /* Делаем линию "призраком" */
+}
+
+/* Настраиваем контент, чтобы он был НАД линией */
+.feedback_5 .container {
+    position: relative; /* Обязательно добавляем позиционирование */
+    z-index: 2;        /* Слой 2 — выше, чем линия (0) */  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 120px;
+}
+
+.feedback_img_3 {
+    width: 350px;          /* Ограничиваем размер иконки */
+    height: auto; 
+}
+
+.bottom-btn-wrapper {
+    display: flex;
+    justify-content: center; /* Центрует строго по центру экрана */
+    width: 100%;
+    margin-top: 20px;       /* Управляй этим отступом, чтобы отдалить кнопку от текста сверху */
+    position: relative;
+    z-index: 2;             /* Кнопка будет поверх линии фонового SVG */
+}
+
+.btn-3 {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+     border-radius: 5px;
+    width: 165px;
+    height: 50px;
+    background: #323333;
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.btn-3:hover {
+    max-height: 50px;       /* Уменьшили высоту со 150 до 50 (как в Figma) */
+    filter: (100%);
+    opacity: 0.9;           /* Логотипы партнеров обычно делают бледнее */
+    transition: 0.3s;
+}
+
+
+
+.welcome_3 {
+    background-color: #ffffff;
+    padding: 60px 0;
+}
+
+
+
+
+
+/* Стили для секции и контейнера */
+.cards_section {
+    position: relative;
+    padding: 70px 0; /* Отступы сверху и снизу для всей секции */
+    background-color: #ffffff; /* Легкий фоновый цвет секции */
+}
+
+.cards_section .container {
+    max-width: 1200px;        /* Общая ширина сетки */
+    margin: 0 auto;           /* Центрируем всю сетку на экране */
+    padding: 0 15px;          /* Отступы по бокам */
+    
+    display: flex;
+    flex-wrap: wrap;          /* Позволяет карточкам падать на второй ряд */
+    justify-content: space-between; /* Распределяет 3 карточки от края до края */
+    
+    /* Первый параметр (50px) — отступ между рядами сверху-вниз */
+    /* Второй параметр (20px) — минимальный зазор между картами по бокам */
+    gap: 50px 20px; 
+}
+
+/* --- Стили самой карточки --- */
+
+.tailwind-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 320px; 
+    background-color: #ffffff;
+    background-clip: border-box;
+    border-radius: 0.75rem; 
+    color: #374151; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
+    margin-top: 24px; /* Компенсируем отрицательный отступ шапки */
+}
+
+/* Шапка с градиентом, которая "выпрыгивает" вверх */
+.card-header {
+    position: relative;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: -1.5rem; /* Выталкивает блок вверх */
+    height: 180px; 
+    overflow: hidden;
+    border-radius: 0.75rem;
+    background-clip: border-box;
+    background-image: url("https://belarch.ru/wp-content/uploads/2020/05/%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-%D0%B4%D0%BE%D0%BC%D0%B0-%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B9-%D1%84%D0%B0%D1%81%D0%B0%D0%B4-1024x696.jpg");
+    background-size: cover;       /* Заставит картинку красиво заполнить весь блок без искажений */
+    background-position: center;
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.4), 0 4px 6px -4px rgba(59, 130, 246, 0.4); 
+}
+
+.card-header_2 {
+    position: relative;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: -1.5rem; /* Выталкивает блок вверх */
+    height: 180px; 
+    overflow: hidden;
+    border-radius: 0.75rem;
+    background-clip: border-box;
+    background-image: url("https://www.ccnova.ru/upload/resize_cache/iblock/8ef/8e1rimlj3ny6slsmc81gyxr3d12d7szp/800_500_0/310-Novatsiya_vid-1_variant-1.jpg");
+    background-size: cover;       /* Заставит картинку красиво заполнить весь блок без искажений */
+    background-position: center;
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.4), 0 4px 6px -4px rgba(59, 130, 246, 0.4);    
+}
+
+.card-header_3 {
+    position: relative;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: -1.5rem; /* Выталкивает блок вверх */
+    height: 180px; 
+    overflow: hidden;
+    border-radius: 0.75rem;
+    background-clip: border-box;
+    background-image: url("https://domsbobrom.com/uploads/images/stati/Koda/ommech.jpg");
+    background-size: cover;       /* Заставит картинку красиво заполнить весь блок без искажений */
+    background-position: center;
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.4), 0 4px 6px -4px rgba(59, 130, 246, 0.4);    
+}
+
+.card-header_4 {
+    position: relative;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: -1.5rem; /* Выталкивает блок вверх */
+    height: 180px; 
+    overflow: hidden;
+    border-radius: 0.75rem;
+    background-clip: border-box;
+    background-image: url("https://stroyprogress-belgorod.ru/storage/projects/KFEnnCRZ2qUnVRa4p7ttsp9Px5WmFE4jcv5AXA5X.jpeg");
+    background-size: cover;       /* Заставит картинку красиво заполнить весь блок без искажений */
+    background-position: center;
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.4), 0 4px 6px -4px rgba(59, 130, 246, 0.4);    
+}
+
+.card-header_5 {
+    position: relative;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: -1.5rem; /* Выталкивает блок вверх */
+    height: 180px; 
+    overflow: hidden;
+    border-radius: 0.75rem;
+    background-clip: border-box;
+    background-image: url("https://villaexpert.ru/wp-content/uploads/2019/07/570A01.jpg");
+    background-size: cover;       /* Заставит картинку красиво заполнить весь блок без искажений */
+    background-position: center;
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.4), 0 4px 6px -4px rgba(59, 130, 246, 0.4);    
+}
+
+.card-header_6 {
+    position: relative;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: -1.5rem; /* Выталкивает блок вверх */
+    height: 180px; 
+    overflow: hidden;
+    border-radius: 0.75rem;
+    background-clip: border-box;
+    background-image: url("https://www.компания-дримхаус.рф/media/news_img/preview_ObswOsm.jpg");
+    background-size: cover;       /* Заставит картинку красиво заполнить весь блок без искажений */
+    background-position: center;
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.4), 0 4px 6px -4px rgba(59, 130, 246, 0.4);    
+}
+
+/* Текстовый блок */
+.card-body {
+    padding: 1.5rem; 
+}
+
+.card-title {
+    margin-top: 0;
+    margin-bottom: 0.5rem; 
+    font-size: 1.25rem; 
+    font-weight: 600;
+    line-height: 1.375;
+    color: #212529;
+}
+
+.card-text {
+    margin: 0;
+    font-size: 1rem; 
+    font-weight: 300;
+    line-height: 1.5;
+    color: inherit;
+}
+
+/* Зона кнопки */
+.card-footer {
+    padding: 1.5rem;
+    padding-top: 0; 
+}
+
+/* Интерактивная кнопка */
+.card-btn {
+    text-decoration: none;
+    user-select: none;
+    border: none;
+    border-radius: 0.5rem; 
+    background-color: #3C3C3B; 
+    padding: 0.75rem 1.5rem; 
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.75rem; 
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.2);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+/* Ховер эффект кнопки */
+.card-btn:hover {
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.4), 0 4px 6px -4px rgba(59, 130, 246, 0.4);
+}
+
+/* Эффект при нажатии */
+.card-btn:active {
+    opacity: 0.85;
+    box-shadow: none;
+}
+
+
+.cards-btn-wrapper {
+    display: flex;
+    justify-content: center; /* Центрирует кнопку строго посередине экрана */
+    width: 100%;
+    margin-top: 50px;        /* Отступ сверху, чтобы отодвинуть кнопку от карточек */
+    position: relative;
+    z-index: 2;
+}
+
+
+
+.btn-4 {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    border-radius: 5px;
+    width: 165px;
+    height: 50px;
+    background: #323333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.btn-4:hover {
+    max-height: 50px;       /* Уменьшили высоту со 150 до 50 (как в Figma) */
+    filter: (100%);
+    opacity: 0.9;           /* Логотипы партнеров обычно делают бледнее */
+    transition: 0.3s;
+}
+
+
+
+
+.welcome_4 {
+    background-color: #F5F5F5;
+    padding: 80px 0;
+}
+
+
+
+
+
+.banner_section .container + .container {
+    margin-top: 50px; /* Задай любое число, какое нужно по макету */
+}
+
+.banner_section .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* --- Сама карточка с фоновым домом --- */
+.house-card {
+    position: relative;
+    width: 100%;
+    min-height: 450px; /* Высота карточки */
+    border-radius: 12px;
+    
+    /* Замени эту ссылку на фото своего дома */
+    background-image: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&auto=format&fit=crop&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Флекс, чтобы прижать белый блок к правому нижнему углу */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 40px; /* Отступы от краев дома до белого блока */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+/* --- Белый полупрозрачный блок с текстом --- */
+.house-card__content {
+    background-color: rgba(255, 255, 255, 0.92); /* Белый цвет с прозрачностью 92% */
+    backdrop-filter: blur(8px); /* Легкое размытие заднего плана сквозь блок */
+    border-radius: 12px;
+    width: 100%;
+    max-width: 580px; /* Ограничиваем ширину плашки, как на макете */
+    padding: 35px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.house-card__title {
+    margin: 0 0 15px 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2d3748;
+    font-family: sans-serif;
+}
+
+.house-card__text {
+    margin: 0 0 30px 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #718096;
+    font-family: sans-serif;
+}
+
+/* --- Подвал плашки (флекс в ряд) --- */
+.house-card__footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* --- Бирюзовая кнопка Read More --- */
+.house-card__btn {
+    text-decoration: none;
+    background-color: #00b4b4; /* Твой фирменный бирюзовый цвет */
+    color: #ffffff;
+    padding: 12px 28px;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.house-card__btn:hover {
+    background-color: #009898; /* Чуть темнее при наведении */
+    transform: translateY(-1px);
+}
+
+.house-card__btn:active {
+    transform: translateY(0);
+}
+
+
+.house-card-2 {
+    position: relative;
+    width: 100%;
+    min-height: 450px; /* Высота карточки */
+    border-radius: 12px;
+    
+    /* Замени эту ссылку на фото своего дома */
+    background-image: url("https://www.ccnova.ru/images/blog/sovremennye-doma/sovremennyj-dom-4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Флекс, чтобы прижать белый блок к правому нижнему углу */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 40px; /* Отступы от краев дома до белого блока */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+
+.house-card-3 {
+    position: relative;
+    width: 100%;
+    min-height: 450px; /* Высота карточки */
+    border-radius: 12px;
+    
+    /* Замени эту ссылку на фото своего дома */
+    background-image: url("https://newphoto.club/pics/uploads/posts/2023-03/1678767042_newphoto-club-p-krasivie-doma-v-zhizni-48.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Флекс, чтобы прижать белый блок к правому нижнему углу */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 40px; /* Отступы от краев дома до белого блока */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+
+
+
+.btn-5 {
+    margin-bottom: 70px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    border-radius: 5px;
+    width: 165px;
+    height: 50px;
+    background: #323333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.btn-5:hover {
+    max-height: 50px;       /* Уменьшили высоту со 150 до 50 (как в Figma) */
+    filter: (100%);
+    opacity: 0.9;           /* Логотипы партнеров обычно делают бледнее */
+    transition: 0.3s;
+}
+
+
+
+
+.subscribe_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.subscribe_input {
+    width: 280px;
+    padding: 12px 20px;
+    border: 1px solid #E0E0E0;
+
+    outline: none;
+}
+
+.btn_send {
+    background-color: #323333; /* Тот самый синий */
+    color: white;
+    border: none;
+    padding: 13px 30px;
+
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn_send:hover {
+    max-height: 50px;       /* Уменьшили высоту со 150 до 50 (как в Figma) */
+    filter: (100%);
+    opacity: 0.9;           /* Логотипы партнеров обычно делают бледнее */
+    transition: 0.3s;
+}
+
+.welcome_desc_4 {
+    margin-bottom: 50px;
+}
+
+
+
+
+
+
+.footer {
+padding: 70px 0;
+background-color: #F6F6F6;
+}
+
+.footer_logo-2 {
+    margin-left: 20px;
+    width: 170px;
+    margin-right: 40px;
+}
+
+
+.footer_nav {
+    display: flex;
+    gap: 80px; /* Расстояние между колонками Our Story, Pet Care и т.д. */
+}
+
+.footer_nav ul {
+    list-style: none; /* Убирает точки у списков */
+    padding: 0;
+}
+
+.footer_nav li:hover {
+    text-decoration: underline;
+}
+
+.footer_nav a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+    line-height: 2;
+}
+
+
+.header_logo-2 {
+    width: 100px;
+}
+
+
+/* From Uiverse.io by dovatgabriel */ 
+.card svg {
+  height: 25px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e7e7e7;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+  height: 50px;
+  width: 200px;
+}
+
+.card::before, .card::after {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  transition: 0.25s linear;
+  z-index: 1;
+}
+
+.card::before {
+  content: "";
+  left: 0;
+  justify-content: flex-end;
+  background-color: #0FB3AF;
+}
+
+.card::after {
+  content: "";
+  right: 0;
+  justify-content: flex-start;
+  background-color: #0FB3AF;
+}
+
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.card:hover span {
+  opacity: 0;
+  z-index: -3;
+}
+
+.card:hover::before {
+  opacity: 0.5;
+  transform: translateY(-100%);
+}
+
+.card:hover::after {
+  opacity: 0.5;
+  transform: translateY(100%);
+}
+
+.card span {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: whitesmoke;
+  font-family: 'Fira Mono', monospace;
+  font-size: 24px;
+  font-weight: 700;
+  opacity: 1;
+  transition: opacity 0.25s;
+  z-index: 2;
+}
+
+.card .social-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  height: 100%;
+  color: whitesmoke;
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.card .social-link svg {
+  text-shadow: 1px 1px rgba(31, 74, 121, 0.7);
+  transform: scale(1);
+}
+
+.card .social-link:hover {
+  background-color: rgba(249, 244, 255, 0.774);
+  animation: bounce_613 0.4s linear;
+}
+
+@keyframes bounce_613 {
+  40% {
+    transform: scale(1.4);
+  }
+
+  60% {
+    transform: scale(0.8);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+/* Задний полупрозрачный фон, блокирующий остальной сайт */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Класс, который будет добавляться через JS для показа окна */
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Маленькое аккуратное окошко по центру */
+.modal-window {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+/* Кнопка-крестик для закрытия */
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+}
+
+/* Простые стили для красивых полей ввода */
+.modal-window h3 { margin-bottom: 20px; color: #333; }
+.modal-window input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+.modal-submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #285AEB; /* Можешь поменять на цвет своего сайта */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* ==========================================================================
+   Адаптив для хедера (когда экран становится меньше 1100px)
+   ========================================================================== */
+@media (max-width: 1100px) {
+    
+    /* 1. Разрешаем элементам хедера переноситься на новую строку, если им тесно */
+    .header .container {
+        flex-wrap: wrap;
+        justify-content: center; /* Выравниваем логотип, меню и кнопки по центру */
+        gap: 20px;               /* Задаем аккуратные отступы между ними */
+        padding: 15px 20px;      /* Добавляем внутренние отступы, чтобы ничего не липло */
+    }
+
+    /* 2. Немного уменьшаем отступы между ссылками в меню, чтобы они были компактнее */
+    .header_list {
+        gap: 15px; 
+    }
+
+    /* 3. Кнопкам авторизации даем команду не сжиматься и не ломаться */
+    .auth-buttons {
+        display: flex;
+        gap: 10px;
+        flex-shrink: 0; /* Запрещаем кнопкам уменьшаться в размерах */
+    }
+}
+
+/* Дополнительный шаг для совсем маленьких экранов (телефонов) */
+@media (max-width: 650px) {
+    .header_list {
+        display: flex;
+        flex-direction: column; /* На мобилках ссылки встанут друг под другом */
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+/* ==========================================================================
+   Адаптив для блока преимуществ (экран меньше 1100px)
+   ========================================================================== */
+@media (max-width: 1100px) {
+    
+    /* Превращаем контейнер в сетку и делим её на 2 колонки */
+    .features .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Ровно по два элемента в ряд */
+        gap: 50px 30px;                        /* 50px отступ между рядами, 30px между колонками */
+        padding: 0 20px;                       /* Отступы по бокам, чтобы карточки не липли к краям экрана */
+    }
+
+    /* На всякий случай сбрасываем внешние отступы у самих карточек */
+    .feature_item {
+        margin: 0 auto;
+    }
+}
+
+/* Спуск для мобильных телефонов (экран меньше 650px) */
+@media (max-width: 650px) {
+    .features .container {
+        grid-template-columns: 1fr; /* На телефонах все карточки встанут строго в один столбик */
+        gap: 40px;                  /* Отступ между карточками по вертикали */
+    }
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 1230px) {
+    
+    /* Добавляем внутренние отступы для контейнера, чтобы текст не лип к экрану */
+    .welcome .container {
+        padding: 0 20px;
+        text-align: center; /* Центрируем весь текстовый блок для красоты */
+    }
+
+    /* Ограничиваем максимальную ширину текста, чтобы он не растягивался колбасой */
+    .welcome_text {
+        max-width: 800px;
+        margin: 0 auto; /* Выравниваем блок строго по центру */
+    }
+
+    /* Чуть уменьшаем размер главного заголовка */
+    .welcome_title {
+        font-size: 36px;      /* Если у тебя был больше, этот размер идеально встанет */
+        margin-bottom: 20px;
+        line-height: 1.3;
+    }
+
+    /* Делаем описание чуть более компактным */
+    .welcome_desc {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+/* Спуск для мобильных телефонов (экран меньше 650px) */
+@media (max-width: 650px) {
+    .welcome_title {
+        font-size: 28px; /* На смартфонах заголовок станет еще чуть меньше, чтобы точно влезть */
+    }
+    
+    .welcome_desc {
+        font-size: 15px; /* Аккуратный читабельный размер для мобилок */
+    }
+}   
+
+
+
+
+
+
+
+
+@media (max-width: 1260px) {
+    
+    /* Добавляем внутренние отступы для контейнера, чтобы текст не лип к экрану */
+    .welcome_2 .container {
+        padding: 0 20px;
+        text-align: center; /* Центрируем весь текстовый блок для красоты */
+    }
+
+    /* Ограничиваем максимальную ширину текста, чтобы он не растягивался колбасой */
+    .welcome_text_2 {
+        max-width: 800px;
+        margin: 0 auto; /* Выравниваем блок строго по центру */
+    }
+
+    /* Чуть уменьшаем размер главного заголовка */
+    .welcome_title_2 {
+        font-size: 36px;      /* Если у тебя был больше, этот размер идеально встанет */
+        margin-bottom: 20px;
+        line-height: 1.3;
+    }
+
+    /* Делаем описание чуть более компактным */
+    .welcome_desc_2 {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+/* Спуск для мобильных телефонов (экран меньше 650px) */
+@media (max-width: 650px) {
+    .welcome_title_2 {
+        font-size: 28px; /* На смартфонах заголовок станет еще чуть меньше, чтобы точно влезть */
+    }
+    
+    .welcome_desc_2 {
+        font-size: 15px; /* Аккуратный читабельный размер для мобилок */
+    }
+}   
+
+
+
+
+
+/* ==========================================================================
+   Адаптив для футера (экран меньше 1250px)
+   ========================================================================== */
+@media (max-width: 1250px) {
+    
+    /* 1. Настраиваем главный контейнер футера */
+    .footer .container {
+        display: flex;
+        flex-direction: column;   /* Выстраиваем элементы вертикально друг под другом */
+        align-items: center;      /* Центрируем все блоки */
+        gap: 40px;                /* Делаем аккуратные отступы между этажами */
+        padding: 0 20px;
+        text-align: center;       /* Центрируем текст внутри */
+    }
+
+    /* 2. Разрешаем колонкам ссылок вставать в ряд или переноситься, если экран совсем мал */
+    .footer_nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px 60px;           /* Отступы между колонками */
+    }
+
+    /* Убираем маркеры списков и центрируем их, если они сбились */
+    .footer_column ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    /* 3. Блок соцсетей автоматически падает в самый низ и встает по центру */
+    .card {
+        display: flex;
+        flex-direction: column;   /* Слово "Social" будет над иконками */
+        align-items: center;
+        gap: 15px;
+        margin-top: 10px;         /* Дополнительный визуальный отступ сверху */
+    }
+
+    /* Делаем ссылки на соцсети красивым горизонтальным рядком */
+    .card .social-link {
+        display: inline-block;
+        margin: 0 8px;            /* Расстояние между круглыми иконками */
+    }
+    
+    .card svg {
+        width: 30px;              /* Оптимальный размер иконок на планшетах/мобилках */
+        height: 30px;
+    }
+}
+
+/* Спуск для мобильных телефонов (экран меньше 650px) */
+@media (max-width: 650px) {
+    /* На телефонах даже три колонки меню About, Support, Legal пускаем строго в один столбик */
+    .footer_nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Адаптив для пошаговых блоков отзывов (экран меньше 1180px)
+   ========================================================================== */
+@media (max-width: 1180px) {
+
+    /* 1. Полностью скрываем пунктирные SVG-линии, чтобы они не ломали экран */
+    .line_4, .line_5 {
+        display: none !important;
+    }
+
+    /* 2. Переводим контейнеры всех трех секций в режим колонки */
+    .feedback .container,
+    .feedback_4 .container,
+    .feedback_5 .container {
+        display: flex;
+        flex-direction: column;   /* Все элементы встают друг под другом */
+        align-items: center;      /* Центрируем всё по горизонтали */
+        text-align: center;       /* Центрируем текст внутри */
+        gap: 30px;                /* Делаем аккуратный отступ между картинкой и текстом */
+        padding: 40px 20px;       /* Уменьшаем огромные вертикальные отступы */
+    }
+
+    /* 3. Магия для второго блока (Add your review):
+       Принудительно меняем порядок элементов, чтобы КАРТИНКА встала НАД текстом */
+    .feedback_4 .container {
+        flex-direction: column-reverse; /* Переворачивает элементы внутри flex */
+    }
+
+    /* 4. Ограничиваем размеры картинок, чтобы они адекватно смотрелись на планшетах */
+    .feedback_img,
+    .feedback_img_2,
+    .feedback_img_3 {
+        max-width: 280px;         /* Оптимальный размер иконок и дома для средних экранов */
+        height: auto;
+        margin: 0 auto;
+    }
+
+    /* 5. Делаем текстовые блоки читабельными */
+    .feedback_text,
+    .feedback_text_4,
+    .welcome_text_3 {
+        max-width: 650px;         /* Текст не должен растягиваться на весь экран */
+        margin: 0 auto;
+    }
+
+    /* Центрируем кнопку "Know More" внутри блокквота */
+    .welcome_text_3 .cta {
+        margin: 20px auto 0 auto; 
+        display: inline-flex;
+    }
+
+    /* Кнопка "Get Started" в самом низу */
+    .cards-btn-wrapper {
+        margin-top: 30px;
+        text-align: center;
+    }
+}
+
+/* Дополнительные правки для маленьких мобилок (экран меньше 600px) */
+@media (max-width: 600px) {
+    .feedback_img,
+    .feedback_img_2,
+    .feedback_img_3 {
+        max-width: 200px; /* Еще немного уменьшаем картинки на смартфонах */
+    }
+
+    .welcome_title_3 {
+        font-size: 26px;  /* Уменьшаем размер шагов-заголовков */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Адаптив для пошаговых блоков отзывов (экран меньше 1180px)
+   ========================================================================== */
+@media (max-width: 1180px) {
+
+    /* 2. Переводим контейнеры всех трех секций в режим колонки */
+    .cards_section .container,
+    .tailwind-card .container {
+        display: flex;
+        flex-direction: column;   /* Все элементы встают друг под другом */
+        align-items: center;      /* Центрируем всё по горизонтали */
+        text-align: center;       /* Центрируем текст внутри */
+        gap: 30px;                /* Делаем аккуратный отступ между картинкой и текстом */
+        padding: 40px 20px;       /* Уменьшаем огромные вертикальные отступы */
+    }
+
+    /* 3. Магия для второго блока (Add your review):
+       Принудительно меняем порядок элементов, чтобы КАРТИНКА встала НАД текстом */
+    .tailwind-card .container {
+        flex-direction: column-reverse; /* Переворачивает элементы внутри flex */
+    }
+
+    /* 4. Ограничиваем размеры картинок, чтобы они адекватно смотрелись на планшетах */
+    .feedback_img,
+    .feedback_img_2,
+    .feedback_img_3 {
+        max-width: 280px;         /* Оптимальный размер иконок и дома для средних экранов */
+        height: auto;
+        margin: 0 auto;
+    }
+
+    /* 5. Делаем текстовые блоки читабельными */
+    .feedback_text,
+    .feedback_text_4,
+    .welcome_text_3 {
+        max-width: 650px;         /* Текст не должен растягиваться на весь экран */
+        margin: 0 auto;
+    }
+
+    /* Центрируем кнопку "Know More" внутри блокквота */
+    .welcome_text_3 .cta {
+        margin: 20px auto 0 auto; 
+        display: inline-flex;
+    }
+
+    /* Кнопка "Get Started" в самом низу */
+    .cards-btn-wrapper {
+        margin-top: 30px;
+        text-align: center;
+    }
+}
+
+/* Дополнительные правки для маленьких мобилок (экран меньше 600px) */
+@media (max-width: 600px) {
+    .feedback_img,
+    .feedback_img_2,
+    .feedback_img_3 {
+        max-width: 200px; /* Еще немного уменьшаем картинки на смартфонах */
+    }
+
+    .welcome_title_3 {
+        font-size: 26px;  /* Уменьшаем размер шагов-заголовков */
+    }
+}
